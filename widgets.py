@@ -86,5 +86,4 @@ class SimpleForm(QWidget):
             cursor.execute(read_query)
 
             result = cursor.fetchone()
-            print(result)
             self.form_submitted.emit(result["first_name"], result["last_name"], result["age"], result["gender"], result["bio"])
